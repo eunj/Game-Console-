@@ -13,13 +13,17 @@
 			var mario;
 			function preload(){
 				game.load.image('mario', 'image/mario.png');
-
+				game.load.image('up', 'image/up.png');
+				game.load.image('down', 'image/down.png');
+				game.load.image('left', 'image/left.png');
+				game.load.image('right', 'image/right.png');
 			}
 			function create(){
 				character = new Phaser.Rectangle(380, 280, 40, 40); 
 				mario = game.add.sprite(100, 100, 'mario');
 				mario.anchor.setTo(0.5.0.5);
 				cursors = game.input.keyboard.createCursorKeys();
+				up = game.add.sprite(700, 400);
 
 			}
 			function update(){
@@ -39,7 +43,7 @@
 
 			}
 			function render(){
-				game.debug.geom(character,'#0fff00');
+			
 			}
 		};
 
