@@ -23,19 +23,22 @@
 				mario = game.add.sprite(100, 100, 'mario');
 
 				cursors = game.input.keyboard.createCursorKeys();
-				up = game.add.sprite(600, 300, 'up');
-				down = game.add.sprite(600, 500, 'down');
-				left = game.add.sprite(500, 400, 'left');
-				right = game.add.sprite(700, 400,'right');
+				up = game.add.button(600, 300, 'up', moveUp);
+				down = game.add.button(600, 500, 'down', moveDown);
+				left = game.add.button(500, 400, 'left', moveLeft);
+				right = game.add.button(700, 400,'right', moveRight);
 
+			}
+			function moveUp(){
+				mario.y +=5;
 			}
 			function update(){
 				if (cursors.up.isDown === true){
-					mario.rotation += 0.05;
+					mario.y += 5;
 
 				}
 				else if(cursors.down.isDown === true){
-					mario.rotation -= 0.05;
+					mario.y -= 5;
 				}
 				else if (cursors.left.isDown === true){
 					mario.x -= 5;
