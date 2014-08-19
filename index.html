@@ -30,7 +30,16 @@
 
 			}
 			function moveUp(){
+				mario.y -=5;
+			}
+			function moveDown(){
 				mario.y +=5;
+			}
+			function moveLeft(){
+				mario.x -=5;
+			}
+			function moveRight(){
+				mario.x +=5;
 			}
 			function update(){
 				if (cursors.up.isDown === true){
