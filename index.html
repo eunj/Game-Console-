@@ -21,9 +21,9 @@
 			function create(){
 				character = new Phaser.Rectangle(380, 280, 40, 40); 
 				mario = game.add.sprite(100, 100, 'mario');
-				mario.anchor.setTo(0.5.0.5);
+
 				cursors = game.input.keyboard.createCursorKeys();
-				up = game.add.sprite(700, 400);
+				up = game.add.sprite(700, 400, 'up');
 
 			}
 			function update(){
